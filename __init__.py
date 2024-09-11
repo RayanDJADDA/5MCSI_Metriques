@@ -54,6 +54,10 @@ def get_commits():
     # Préparer les données pour le graphique
     return jsonify(commit_minutes=commit_minutes)
 
+@app.route('/commits-page/')
+def commits_page():
+    return render_template('commits.html')
+
                                                                                                                                        
 @app.route('/')
 def hello_world():
